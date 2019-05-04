@@ -8,13 +8,33 @@ class CreateRequest {
 }
 
 // TODO: class for type safety
-const braid = {
+const braid1 = {
   name: 'Devotional',
   desc: 'Read the Word every morning',
   freq: 'daily', // TODO: string enum
   creatorUsername: 'cltang01', // assume unique
   createdAt: 1556992380000, // millis since epoch
+  participants: ['cltang01', 'kevinf', 'tosin', 'jeremychen'], //user names
 };
+
+const braid2 = {
+  name: 'Exercise',
+  desc: 'Stay healthy',
+  freq: 'weekly', // TODO: string enum
+  creatorUsername: 'tosin', // assume unique
+  createdAt: 1546952380000, // millis since epoch
+  participants: ['cltang01', 'tosin', 'jeremychen'], //user names
+};
+
+const user1 = {
+	username: 'cltang01',
+	braids: [braid1, braid2] // vs braidid
+}
+
+const user2 = {
+	username: 'kevinf',
+	braids: [braid1] // vs braidid
+}
 
 class TransportService {
 	constructor(host) {
@@ -87,7 +107,7 @@ class TransportService {
 
 
 // Test script
-const req = new CreateRequest(braid);
+const req = new CreateRequest(braid1);
 
 // const host = 'https://localhost:9000';
 // const host = 'https://httpbin.org/get'; // tester
