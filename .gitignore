@@ -1,0 +1,5 @@
+# for python virtualenv
+venv
+
+# pycharm
+.idea
