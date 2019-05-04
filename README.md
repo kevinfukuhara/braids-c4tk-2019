@@ -1,8 +1,9 @@
 # braids-c4tk-2019
 Code for the Kingdom - Braids project  (based off the Three-Fold-Cord)
 
+# Frontend server setup
 
-
+1. `python3 -m http.server 7800` or `python SimpleHTTPServer 8000`
 
 # Backend Server Setup
 
@@ -12,4 +13,4 @@ Code for the Kingdom - Braids project  (based off the Three-Fold-Cord)
     1. To deactivate run: `deactivate`
 3. Install requirements. run: `pip install -r requirements.txt`
 4. In braids_backend run the development server: `python manage.py runserver`
-5: Go to local host to play with the service.
+5. Go to local host to play with the service.
