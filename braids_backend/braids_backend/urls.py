@@ -18,6 +18,7 @@ from rest_framework import routers
 from braidservice import views
 
 router = routers.DefaultRouter()
+router.register(r'home', views.HomeViewSet)
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 

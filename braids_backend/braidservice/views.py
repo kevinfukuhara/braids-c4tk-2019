@@ -1,4 +1,6 @@
 from django.contrib.auth.models import User, Group
+from django.http import HttpResponse
+from django.template import loader
 from rest_framework import viewsets
 from .serializers import UserSerializer, GroupSerializer
 
@@ -17,3 +19,11 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class HomeView(request):
+    """
+    Renders home view.
+    """
+    template = loader.get_template('../../index.html') # load from root?
+    context = {}
+    return HttpResponse(template.render(context, request))
