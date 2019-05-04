@@ -109,13 +109,14 @@ class TransportService {
 // Test script
 const req = new CreateRequest(braid1);
 
-// const host = 'https://localhost:9000';
+const host = 'http://localhost:8000';
 // const host = 'https://httpbin.org/get'; // tester
-const host = 'https://braids-app.azurewebsites.net/'; // actual API
-const transportService = new TransportService();
+//const host = 'https://braids-app.azurewebsites.net/'; // actual API
+const transportService = new TransportService(host);
+transportService.getUsers()
 transportService.createBraid(req); //.then(response => {});
-// transportService.getAllBraids(req); //.then(response => {});
-// transportService.getBraid(req); //.then(response => {});
+transportService.getAllBraids(req); //.then(response => {});
+transportService.getBraid(req); //.then(response => {});
 //
 
 //
