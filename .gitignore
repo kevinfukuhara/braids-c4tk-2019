@@ -3,3 +3,11 @@ venv
 
 # pycharm
 .idea
+
+# VS
+.vs
+
+# py cache
+*/__pycache__/
+*.pyc
+*.cpython-37.pyc
