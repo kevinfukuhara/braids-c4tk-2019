@@ -93,8 +93,7 @@ class RequestService {
 		};
 
 		return jQuery.ajax(this.url+path, settings).then(response => {
-			// TODO: process response into Braid object
-			debugger;
+			// TODO: process response into Braid objects
 			return response.results;
 		});
 	}
@@ -102,7 +101,7 @@ class RequestService {
 }
 
 const print = (label, obj) => {
-	console.log(label + JSON.stringify(data));
+	console.log(label + JSON.stringify(obj));
 }
 
 // Test script
@@ -120,3 +119,5 @@ requestService.createBraid(braid1).then(b => {print(' created a braid: ' + b)});
 requestService.getAllBraids().then(braids => {print(' got all braids: ' + braids)});
 const braidId = 'fakeBraidId'; // TODO: get a real value
 requestService.getBraid(braidId).then(b => {print(' got braid by id: ' + b)});
+
+exports = RequestService;
